@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Idiotes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="">studio idiotes</a>
+    </nav>
+    <div class="container main-container">
+        <div class="grid-section">
+            <div class="grid-item guesthouse" id="article-trigger"><span>A</span></div>
+            <div class="grid-item kitchen coming-soon">
+                <span>B</span>
+                <sup>coming soon</sup>
+                <div class="blur-bg"></div>
+            </div>
+            <div class="grid-item retreats coming-soon">
+                <span>C</span>
+                <sup>coming soon</sup>
+                <div class="blur-bg"></div>
+            </div>
+            <div class="grid-item agency" id="studio-trigger"><span>studio</span></div>
+        </div>
+        <div class="content-section">
+            <div class="countdown"><sup>59 days until March 15</sup></div>
+            <div class="gallery">
+                <img src="img/bxyz_test_img_1.jpg" class="gallery-img active" alt="Gallery image 1">
+                <img src="img/bxyz_test_img_2.jpg" class="gallery-img" alt="Gallery image 2">
+                <img src="img/bxyz_test_img_3.jpg" class="gallery-img" alt="Gallery image 3">
+                <img src="img/bxyz_test_img_4.jpg" class="gallery-img" alt="Gallery image 4">
+                <img src="img/bxyz_test_img_5.jpg" class="gallery-img" alt="Gallery image 5">
+                <img src="img/bxyz_test_img_6.jpg" class="gallery-img" alt="Gallery image 6">
+            </div>
+            <div class="construction-marquee">
+                <marquee behavior="scroll" direction="left" scrollamount="5">under construction under construction under construction under construction under construction under construction under construction under construction under construction under construction</marquee>
+            </div>
+        </div>
+    </div>
+
+    <div class="container studio-container" style="display: none;">
+        <button class="back-button">←</button>
+        <div class="studio-gallery">
+            <div class="gallery-scroll">
+                <img src="img/bxyz_test_img_1.jpg" class="studio-img" alt="Studio image 1">
+                <img src="img/bxyz_test_img_2.jpg" class="studio-img" alt="Studio image 2">
+                <img src="img/bxyz_test_img_3.jpg" class="studio-img" alt="Studio image 3">
+                <img src="img/bxyz_test_img_4.jpg" class="studio-img" alt="Studio image 4">
+                <img src="img/bxyz_test_img_5.jpg" class="studio-img" alt="Studio image 5">
+                <img src="img/bxyz_test_img_6.jpg" class="studio-img" alt="Studio image 6">
+            </div>
+        </div>
+        <div class="studio-content">
+            <div class="text-content">
+                <h2>Studio Idiotes</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container article-container" style="display: none;">
+        <button class="back-button">←</button>
+        <div class="article-content">
+            <h1>Article Title</h1>
+            <p class="article-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            
+            <div class="horizontal-gallery">
+                <div class="gallery-track">
+                    <img src="img/bxyz_test_img_1.jpg" alt="Article image 1">
+                    <img src="img/bxyz_test_img_2.jpg" alt="Article image 2">
+                    <img src="img/bxyz_test_img_3.jpg" alt="Article image 3">
+                    <img src="img/bxyz_test_img_4.jpg" alt="Article image 4">
+                    <img src="img/bxyz_test_img_5.jpg" alt="Article image 5">
+                    <img src="img/bxyz_test_img_6.jpg" alt="Article image 6">
+                </div>
+            </div>
+
+            <div class="article-paragraphs">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+
+            <button class="scroll-top">↑</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Main container layout */
+    .main-container {
+        flex-direction: column;
+    }
+
+    .grid-section,
+    .content-section {
+        width: 100%;
+    }
+
+    /* Maintain two columns in grid */
+    .grid-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    /* Adjust grid items for better mobile view */
+    .grid-item {
+        font-size: 2.5rem;
+        padding: 1.5rem;
+        min-height: 25vh;
+    }
+
+    /* Content section layout */
+    .content-section {
+        margin-top: 2rem;
+        position: relative;
+        min-height: 50vh;
+    }
+
+    .countdown {
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+        position: relative;
+    }
+
+    .construction-marquee {
+        width: 100%;
+        position: relative;
+        bottom: auto;
+        margin-top: 1rem;
+    }
+
+    /* Article container layout */
+    .article-container {
+        flex-direction: column;
+        padding-top: 4rem; /* More space for back button */
+    }
+
+    .article-content {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .horizontal-gallery {
+        width: 100vw;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+    }
+
+    .gallery-track img {
+        width: 100vw;
+        height: auto;
+        max-height: none;
+    }
+
+    /* Back button positioning */
+    .back-button {
+        top: 2rem;
+        left: 1.5rem;
+        z-index: 1000;
+    }
+
+    /* Gallery adjustments for main page */
+    .gallery {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        overflow: hidden;
+        margin: 1rem 0;
+    }
+
+    .gallery-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .gallery-img.active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    /* Studio container layout */
+    .studio-container {
+        flex-direction: column;
+    }
+
+    .studio-gallery {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .studio-content {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    /* Gallery adjustments */
+    .gallery {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .gallery-img.active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    /* Horizontal gallery scrolling with snap behavior */
+    .gallery-scroll,
+    .gallery-track,
+    .gallery {
+        width: 100%;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        gap: 0;
+    }
+
+    .gallery img,
+    .studio-img,
+    .gallery-track img {
+        width: 100%;
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+    }
+
+    /* Hide scrollbar but keep functionality */
+    .gallery-scroll::-webkit-scrollbar,
+    .gallery-track::-webkit-scrollbar,
+    .gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .gallery-scroll,
+    .gallery-track,
+    .gallery {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Navigation adjustments */
+    nav {
+        height: auto;
+        padding: 0.75rem;
+    }
+
+    /* Text content spacing */
+    .text-content {
+        padding: 1.5rem;
+    }
+
+    h1, h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+}

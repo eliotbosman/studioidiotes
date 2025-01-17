@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.75pt;
+}
+
+a {
+    color: black;
+}
+
+@font-face {
+    font-family: 'Radio Grotesk';
+    src: url('RadioGrotesk-Regular.woff2') format('woff2'),
+        url('RadioGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Radio Grotesk';
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Grid Section */
+.grid-section {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: black;
+    font-size: 4rem;
+    border: black 1pt solid;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grid-item span {
+    position: relative;
+    z-index: 1;
+}
+
+.guesthouse {
+    background-color: #DDD8CB;
+}
+
+.kitchen {
+    background-color: #DDD8CB;
+}
+
+.retreats {
+    background-color: #DDD8CB;
+}
+
+.agency {
+    background-color: #DDD8CB;
+    color: black;
+}
+
+nav a {
+    text-decoration: none;
+    display:flex;
+    place-self: center;
+}
+
+nav {
+    height: 2vh;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 4001;
+    border-bottom: 1pt solid black;
+}
+
+/* Content Section */
+.content-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background: #F0F1F0;
+    border: solid 1pt black;
+    position: relative;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.gallery {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.gallery-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.countdown {
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.construction-marquee {
+    width: 100%;
+    position: relative;
+    padding: 0.5rem 0;
+    border-top: 1pt solid black;
+}
+
+.construction-marquee marquee {
+    font-size: 2rem;
+    color: black;
+    width: 100%;
+    padding-bottom: 0.25vh;
+}
+
+/* Studio Section */
+.studio-container {
+    min-height: 100vh;
+    background: white;
+}
+
+.studio-gallery {
+    width: 50%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    position: relative;
+}
+
+.gallery-scroll {
+    height: 100%;
+}
+
+.studio-img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    scroll-snap-align: start;
+    display: block;
+}
+
+.studio-content {
+    width: 50%;
+    padding: 2rem;
+    background: #F0F1F0;
+    border-left: 1pt solid black;
+}
+
+.text-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.text-content h2 {
+    margin-bottom: 2rem;
+}
+
+.text-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Article Section */
+.article-container {
+    padding: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+}
+
+.article-content {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.article-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.article-intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.horizontal-gallery {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    height: 50vh;
+    overflow-x: scroll;
+    margin: 3rem 0;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.gallery-track {
+    display: contents;
+}
+
+.gallery-track img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.article-paragraphs {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.article-paragraphs p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.scroll-top:hover {
+    transform: translateY(-5px);
+}
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+}
+
+/* Coming Soon Items */
+.coming-soon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon sup {
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    color: white;
+    pointer-events: none;
+}
+
+.coming-soon:hover sup {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.blur-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/bxyz_test_img_1.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px) brightness(0.7);
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.coming-soon:hover .blur-bg {
+    opacity: 1;
+}
+
+.coming-soon span {
+    position: relative;
+    z-index: 1;
+}
+
+.coming-soon:hover {
+    background-color: transparent !important;
+}
+
+.coming-soon:hover span {
+    color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .grid-section {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+    .content-section {
+        width: 100%;
+    }
+    
+    .logo-text {
+        font-size: 2rem;
+    }
+}
